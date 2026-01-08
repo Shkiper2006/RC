@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RC</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>RC</h1>
+        <div class="status" id="status">Не подключено</div>
+      </header>
+
+      <section class="panel">
+        <h2>Регистрация / вход</h2>
+        <div class="row">
+          <input id="username" placeholder="Имя пользователя" />
+          <button id="register">Войти</button>
+        </div>
+        <div class="row">
+          <label>Token</label>
+          <input id="token" placeholder="Bearer token" />
+          <button id="applyToken">Применить токен</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Комнаты</h2>
+        <div class="row">
+          <input id="roomName" placeholder="Название комнаты" />
+          <button id="createRoom">Создать комнату</button>
+          <button id="refreshRooms">Обновить</button>
+        </div>
+        <div class="row">
+          <select id="rooms"></select>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Каналы</h2>
+        <div class="row">
+          <input id="channelName" placeholder="Название канала" />
+          <select id="channelType">
+            <option value="text">Текстовый</option>
+            <option value="voice">Голосовой</option>
+          </select>
+          <button id="createChannel">Создать канал</button>
+        </div>
+        <div class="row">
+          <select id="channels"></select>
+          <button id="joinChannel">Войти</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Текстовый канал</h2>
+        <div id="chat" class="chat"></div>
+        <div class="row">
+          <input id="message" placeholder="Сообщение" />
+          <button id="send">Отправить</button>
+          <button id="emoji">😊</button>
+        </div>
+        <div class="row">
+          <input type="file" id="file" />
+          <button id="upload">Отправить картинку</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Голос/экран</h2>
+        <div class="row">
+          <button id="joinVoice">Подключиться</button>
+          <button id="shareScreen">Демонстрация экрана</button>
+          <button id="stopVoice">Остановить</button>
+        </div>
+        <div class="row" id="media"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
 
